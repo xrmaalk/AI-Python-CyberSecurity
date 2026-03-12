@@ -13,8 +13,8 @@ venv/
 .env
 
 # VS Code
-.vscode/
-.code-workspace
+*.vscode/
+*.code-workspace
 
 # OS
 .DS_Store
@@ -22,3 +22,5 @@ Thumbs.db
 
 # Logs
 *.log
+
+*.csv
