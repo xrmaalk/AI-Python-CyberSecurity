@@ -32,8 +32,8 @@ model = IsolationForest(
 # Load the synthetic logs
 logs_df = load_logs()
 
-# Sanity Check - Print the columns of the loaded DataFrame to verify structure
-print(logs_df.columns.tolist())
+# # Sanity Check - Print the columns of the loaded DataFrame to verify structure
+# print(logs_df.columns.tolist())
 
 # Fit the model to the features
 features = logs_df[['cpu_usage', 'memory_usage', 'network_in', 'network_out']]
@@ -46,7 +46,7 @@ logs_df['anomaly'] = model.predict(features)
 anomalies = logs_df[logs_df['anomaly'] == -1]
 
 # Print the detected anomalies
-print(f"[^] Detected {len(anomalies)} anomalies:")
+print(f"[!] Detected {len(anomalies)} anomalies:\n")
 
 # Display the anomalies with relevant details
 print(anomalies[['cpu_usage',
@@ -54,4 +54,4 @@ print(anomalies[['cpu_usage',
 
 # Save the detected anomalies to a CSV file for further analysis
 anomalies.to_csv('detected_anomalies.csv', index=False)
-print(f"[^] Detected anomalies saved to detected_anomalies.csv")
+print("\n[>] Detected anomalies saved to detected_anomalies.csv")
