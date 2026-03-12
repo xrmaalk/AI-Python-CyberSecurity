@@ -1,3 +1,23 @@
-venv/
-.code-workspace
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
