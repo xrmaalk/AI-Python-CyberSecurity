@@ -42,3 +42,4 @@ artifact = {
 joblib.dump(artifact, MODEL_PATH)
 
 print(f"[>] Model trained and saved successfully: {MODEL_PATH}")
+
